@@ -59,7 +59,7 @@ class EloRankerDB extends Dexie {
   constructor() {
     super('EloRankerDB')
     this.version(1).stores({
-      lists: '++id, name, createdAt',
+      lists: '++id, name, createdAt, updatedAt',
       items: '++id, listId, name, elo',
       matches: '++id, listId, winnerId, loserId, timestamp',
       eloHistory: '++id, itemId, listId, timestamp',
