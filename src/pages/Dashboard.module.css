@@ -1,0 +1,86 @@
+.page { display: flex; flex-direction: column; gap: 32px; }
+
+.header {
+  display: flex;
+  align-items: flex-start;
+  justify-content: space-between;
+  gap: 16px;
+  flex-wrap: wrap;
+}
+
+.title {
+  font-size: 1.75rem;
+  font-weight: 700;
+  letter-spacing: -0.03em;
+}
+
+.subtitle {
+  color: var(--text-secondary);
+  margin-top: 4px;
+}
+
+.empty {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 16px;
+  text-align: center;
+  padding: 80px 24px;
+  background: var(--bg-surface);
+  border-radius: 16px;
+  border: 1px dashed var(--border);
+}
+.emptyIcon { font-size: 3rem; }
+.empty h2 { font-size: 1.25rem; }
+.empty p { color: var(--text-secondary); }
+
+.grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(280px, 1fr));
+  gap: 16px;
+}
+
+.card {
+  background: var(--bg-surface);
+  border: 1px solid var(--border-subtle);
+  border-radius: 14px;
+  padding: 20px;
+  display: flex;
+  flex-direction: column;
+  gap: 14px;
+  transition: border-color 0.2s, background 0.2s;
+}
+.card:hover {
+  border-color: var(--border);
+  background: var(--bg-elevated);
+}
+
+.cardHeader { flex: 1; }
+.cardTitle { font-size: 1.05rem; font-weight: 600; }
+.cardDesc { color: var(--text-secondary); font-size: 0.875rem; margin-top: 4px; }
+
+.cardMeta {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.metaBadge {
+  background: var(--accent-dim);
+  color: var(--accent-hover);
+  font-size: 0.75rem;
+  font-weight: 600;
+  padding: 3px 10px;
+  border-radius: 20px;
+}
+
+.metaDate {
+  font-size: 0.75rem;
+  color: var(--text-muted);
+}
+
+.cardActions {
+  display: flex;
+  gap: 8px;
+  flex-wrap: wrap;
+}

@@ -1,0 +1,115 @@
+.page { display: flex; flex-direction: column; gap: 24px; }
+.loading { text-align: center; color: var(--text-muted); padding: 60px; }
+
+.header {
+  display: flex;
+  align-items: flex-start;
+  justify-content: space-between;
+  gap: 16px;
+  flex-wrap: wrap;
+}
+
+.title { font-size: 1.75rem; font-weight: 700; letter-spacing: -0.03em; }
+.subtitle { color: var(--text-secondary); margin-top: 4px; }
+.actions { display: flex; gap: 8px; flex-wrap: wrap; }
+
+.statGrid {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(160px, 1fr));
+  gap: 12px;
+}
+
+.statCard {
+  background: var(--bg-surface);
+  border: 1px solid var(--border-subtle);
+  border-radius: 12px;
+  padding: 16px;
+  display: flex;
+  flex-direction: column;
+  gap: 4px;
+}
+
+.statValue {
+  font-size: 1.25rem;
+  font-weight: 700;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+}
+
+.statLabel { font-size: 0.75rem; color: var(--text-secondary); }
+
+.twoCol {
+  display: grid;
+  grid-template-columns: 1fr 1.6fr;
+  gap: 16px;
+  align-items: start;
+}
+
+@media (max-width: 700px) {
+  .twoCol { grid-template-columns: 1fr; }
+}
+
+.itemPanel, .chartPanel {
+  background: var(--bg-surface);
+  border: 1px solid var(--border-subtle);
+  border-radius: 16px;
+  padding: 20px;
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+}
+
+.panelTitle { font-size: 1rem; font-weight: 600; }
+
+.itemList { display: flex; flex-direction: column; gap: 4px; max-height: 480px; overflow-y: auto; }
+
+.itemRow {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  padding: 10px 12px;
+  border-radius: 8px;
+  background: var(--bg-elevated);
+  border: 1px solid transparent;
+  text-align: left;
+  transition: background 0.15s, border-color 0.15s;
+  width: 100%;
+}
+.itemRow:hover { background: var(--bg-hover); }
+.itemRowActive { border-color: var(--accent) !important; background: var(--accent-dim) !important; }
+
+.itemRank { font-variant-numeric: tabular-nums; color: var(--text-muted); font-size: 0.8rem; min-width: 28px; }
+.itemMeta { flex: 1; min-width: 0; }
+.itemName { font-weight: 500; display: block; overflow: hidden; text-overflow: ellipsis; white-space: nowrap; font-size: 0.9rem; }
+.itemRecord { font-size: 0.72rem; color: var(--text-muted); display: block; margin-top: 1px; }
+.itemElo { font-weight: 700; color: var(--accent); font-variant-numeric: tabular-nums; font-size: 0.9rem; }
+
+.noHistory { color: var(--text-muted); font-size: 0.875rem; text-align: center; padding: 24px; }
+
+.matchHistory { display: flex; flex-direction: column; gap: 6px; margin-top: 8px; }
+.matchHistoryTitle { font-size: 0.9rem; font-weight: 600; color: var(--text-secondary); }
+
+.matchRow {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  padding: 8px 12px;
+  border-radius: 8px;
+  font-size: 0.82rem;
+}
+
+.matchWon { background: rgba(76,175,136,0.1); }
+.matchLost { background: rgba(247,108,106,0.08); }
+
+.matchResult { font-weight: 700; min-width: 28px; }
+.matchWon .matchResult { color: var(--success); }
+.matchLost .matchResult { color: var(--danger); }
+
+.matchOpponent { flex: 1; color: var(--text-secondary); overflow: hidden; text-overflow: ellipsis; white-space: nowrap; }
+
+.matchDelta { font-weight: 600; font-variant-numeric: tabular-nums; }
+.matchWon .matchDelta { color: var(--success); }
+.matchLost .matchDelta { color: var(--danger); }
+
+.matchElo { color: var(--text-muted); font-variant-numeric: tabular-nums; min-width: 60px; text-align: right; }
